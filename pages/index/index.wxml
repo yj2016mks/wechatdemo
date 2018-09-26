@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+ <view class="page-head">
+  <view class="page-section swiper">
+    <swiper
+      indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="swiper-item" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+ </view>
+ <view class="page-body">
+  <view class="city-select">
+    <view class="flex-item sourceitem">
+     <view class="sourcecitylabel"><text>出发城市</text></view>
+     <view class="animationSourceCity" animation="{{animationSourceCity}}">{{sourceCity}}</view>
+   </view>
+   <view class="flex-item" bindtap="rotate"><image animation="{{animationData}}" class="switch" src="../images/switch.png" /></view>
+   <view class="flex-item destitem">
+    <view class="desccitylabel"><text>到达城市</text></view>
+    <view class="animationDestCity" animation="{{animationDestCity}}">{{destCity}}</view>
+   </view>
+  </view> 
+  <button type="default" size="mini" bindtap="chooseImage" wx:if="{{images.length < 3}}">添加图片</button>
+  <view class="question-images">
+   <block wx:for="{{images}}" wx:key="*this">
+     <view class="q-image-wrap">
+       <!-- 图片缩略图  -->
+       <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+       <!-- 移除图片的按钮  -->
+       <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+     </view>
+   </block>
+  </view>
+ </view>
+</view>
+

@@ -1,0 +1,58 @@
+/**index.wxss**/
+.container{
+  width: 100%;
+  display: block;
+}
+.page-head{
+  padding: 10rpx;
+}
+.page-section{
+  width: 100%;
+  display: block;
+}
+.swiper-item{
+  display: block;
+  height: 220px;
+}
+.swiper,.swiper-item{
+ width:100%;
+}
+.page-body{
+ width: 100%;
+}
+.city-select{
+ display: flex;
+ justify-content: space-between;
+}
+.sourceitem{
+ flex-basis: 170rpx;
+ margin-left: 30rpx;
+}
+.destitem{
+  flex-basis: 170rpx;
+}
+.city-select .flex-item image{
+ width:50px;
+ height:50px;
+ display: block;
+}
+.animationSourceCity{
+ position: absolute;
+ left: 30rpx;
+}
+.animationDestCity{
+ position: absolute;
+ right: 30rpx;
+}
+.animation-element-wrapper {
+  display: flex;
+  width: 100%;
+  padding-top: 150rpx;
+  padding-bottom: 150rpx;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.question-images{
+ height:200px;
+}
